@@ -1,3 +1,8 @@
+/* Global font styling */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 /* Intel-branded header section */
 header {
   /* Intel Blue professional background */
@@ -28,8 +33,7 @@ header img {
   margin-bottom: 20px;
   /* Make the logo look polished */
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
 }
 
 /* Main headline styling */
@@ -42,8 +46,8 @@ header h1 {
   line-height: 1.2;
   /* Remove default margins and add custom spacing */
   margin: 20px 0;
-  /* Use a clean, professional font */
-  font-family: Arial, sans-serif;
+  /* Use the site font */
+  font-family: inherit;
   /* Slightly bolder appearance */
   font-weight: bold;
 }
@@ -52,18 +56,18 @@ header h1 {
 header p {
   /* White text for readability */
   color: white;
-  /* Readable font size */
-  font-size: 18px;
+  /* Slightly smaller font size for subheading */
+  font-size: 16px;
   /* Good line spacing for readability */
   line-height: 1.6;
   /* Remove default margins */
   margin: 15px 0 0 0;
-  /* Professional font stack */
-  font-family: Arial, sans-serif;
+  /* Use the site font */
+  font-family: inherit;
 }
 
 /* Timeline section styling */
-section {
+.timeline {
   /* Padding for spacing around the section */
   padding: 40px 20px;
   /* Add space below the section */
@@ -85,7 +89,7 @@ section {
 }
 
 /* Individual timeline cards */
-section div {
+.timeline div {
   /* Set fixed width for cards so they don't shrink */
   flex: 0 0 300px;
   /* Minimum width for card readability */
@@ -115,7 +119,7 @@ section div {
 }
 
 /* Card images */
-section div img {
+.timeline div img {
   /* Make image take full width of card */
   width: 100%;
   /* Maintain aspect ratio */
@@ -131,20 +135,19 @@ section div img {
 }
 
 /* Image zoom effect on card hover */
-section div:hover img {
+.timeline div:hover img {
   /* Slightly zoom in the image for a dynamic effect */
   transform: scale(1.05);
 }
 
 /* Content container inside cards */
-section div > *:not(img) {
+.timeline div > *:not(img) {
   /* Add padding to text content only */
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-inline: 20px;
 }
 
 /* First text element gets top padding */
-section div h2 {
+.timeline div h2 {
   /* Add padding to the top */
   padding-top: 20px;
   /* Add padding to the bottom */
@@ -152,7 +155,7 @@ section div h2 {
 }
 
 /* Card hover effect - lift up when user hovers */
-section div:hover {
+.timeline div:hover {
   /* Move card up slightly */
   transform: translateY(-5px);
   /* Stronger shadow on hover */
@@ -164,15 +167,15 @@ section div:hover {
 }
 
 /* Card heading styling */
-section h2 {
+.timeline h2 {
   /* Large font for year */
   font-size: 32px;
   /* Eco-friendly green for year */
   color: #2dba78;
   /* Reduce margin for better spacing */
   margin: 0 0 15px 0;
-  /* Professional font */
-  font-family: Arial, sans-serif;
+  /* Use the site font */
+  font-family: inherit;
   /* Bold for emphasis */
   font-weight: bold;
   /* Smooth transition for hover effect */
@@ -180,21 +183,21 @@ section h2 {
 }
 
 /* Year text gets brighter on hover */
-section div:hover h2 {
+.timeline div:hover h2 {
   /* Brighter green on hover */
   color: #1e9b5c;
 }
 
 /* Card subheading styling */
-section h3 {
+.timeline h3 {
   /* Slightly smaller than h2 */
   font-size: 20px;
   /* Dark green for readability and sustainability theme */
   color: #1e5c3f;
   /* Spacing around the subheading */
   margin: 10px 0 12px 0;
-  /* Professional font */
-  font-family: Arial, sans-serif;
+  /* Use the site font */
+  font-family: inherit;
   /* Bold for emphasis */
   font-weight: bold;
   /* Smooth transition for hover effect */
@@ -202,13 +205,13 @@ section h3 {
 }
 
 /* Title gets brighter on hover */
-section div:hover h3 {
+.timeline div:hover h3 {
   /* Brighter green on hover */
   color: #2dba78;
 }
 
 /* Card paragraph text */
-section p {
+.timeline div p {
   /* Readable font size */
   font-size: 16px;
   /* Dark gray-green for text readability */
@@ -216,31 +219,43 @@ section p {
   /* Good line spacing for readability */
   line-height: 1.6;
   /* Remove default margins */
-  margin: 0 0 20px 0;
-  /* Professional font */
-  font-family: Arial, sans-serif;
-  /* Start with slightly transparent text */
-  opacity: 0.8;
+  margin: 0;
+  /* Use the site font */
+  font-family: inherit;
+  /* Hide paragraphs by default until hover */
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
   /* Smooth transition for hover reveal effect */
   transition: all 0.3s ease;
-  /* Small scale transformation for subtle effect */
-  transform: scale(1);
+  /* Keep layout compact when hidden */
+  transform: scale(0.98);
 }
 
 /* Paragraph text reveals fully and animates on hover */
-section div:hover p {
+.timeline div:hover p {
   /* Make text fully opaque and bold on hover */
   opacity: 1;
+  max-height: 500px;
+  margin-block-end: 20px;
   /* Slightly enlarge text on hover for emphasis */
   transform: scale(1.02);
   /* Slightly bolder for better readability */
   font-weight: 500;
 }
 
+/* Feature card outlines and modern font style */
+.feature-card {
+  border: 2px solid #1e5c3f;
+  border-radius: 16px;
+  background-color: #f7f9f4;
+  font-family: inherit;
+}
+
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
   /* Keep horizontal scrolling on all screen sizes */
-  section {
+  .timeline {
     /* Cards remain in horizontal scroll */
     flex-direction: row;
     /* Maintain the scroll snap behavior */
@@ -248,7 +263,7 @@ section div:hover p {
   }
 
   /* Keep cards at consistent size on smaller screens */
-  section div {
+  .timeline div {
     /* Maintain fixed width for horizontal scroll */
     flex: 0 0 280px;
     /* Adjust for smaller screens */

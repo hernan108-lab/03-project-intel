@@ -1,0 +1,263 @@
+/* Intel-branded header section */
+header {
+  /* Intel Blue professional background */
+  background-color: #0071C5;
+  /* Add padding for spacing around content */
+  padding: 40px 20px;
+  /* Center-align all content */
+  text-align: center;
+  /* Add space below the header */
+  margin-bottom: 40px;
+}
+
+/* Container inside header for better organization */
+header div {
+  /* Maximum width for readability */
+  max-width: 800px;
+  /* Center the container on the page */
+  margin: 0 auto;
+}
+
+/* Intel logo sizing and spacing */
+header img {
+  /* Set a reasonable logo width */
+  width: 100px;
+  /* Maintain aspect ratio */
+  height: auto;
+  /* Add space below the logo */
+  margin-bottom: 20px;
+  /* Make the logo look polished */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Main headline styling */
+header h1 {
+  /* White text for high contrast against blue background */
+  color: white;
+  /* Large, bold font for impact */
+  font-size: 48px;
+  /* Reduce space between lines */
+  line-height: 1.2;
+  /* Remove default margins and add custom spacing */
+  margin: 20px 0;
+  /* Use a clean, professional font */
+  font-family: Arial, sans-serif;
+  /* Slightly bolder appearance */
+  font-weight: bold;
+}
+
+/* Subheading styling */
+header p {
+  /* White text for readability */
+  color: white;
+  /* Readable font size */
+  font-size: 18px;
+  /* Good line spacing for readability */
+  line-height: 1.6;
+  /* Remove default margins */
+  margin: 15px 0 0 0;
+  /* Professional font stack */
+  font-family: Arial, sans-serif;
+}
+
+/* Timeline section styling */
+section {
+  /* Padding for spacing around the section */
+  padding: 40px 20px;
+  /* Add space below the section */
+  margin-bottom: 40px;
+  /* Display cards in a flex row */
+  display: flex;
+  /* Prevent cards from wrapping - keep horizontal */
+  flex-wrap: nowrap;
+  /* Space between cards */
+  gap: 20px;
+  /* Enable horizontal scrolling */
+  overflow-x: auto;
+  /* Enable smooth scroll snapping */
+  scroll-snap-type: x mandatory;
+  /* Smooth scrolling behavior */
+  scroll-behavior: smooth;
+  /* Add padding below for scrollbar space */
+  padding-bottom: 20px;
+}
+
+/* Individual timeline cards */
+section div {
+  /* Set fixed width for cards so they don't shrink */
+  flex: 0 0 300px;
+  /* Minimum width for card readability */
+  min-width: 300px;
+  /* Add padding inside each card */
+  padding: 0;
+  /* Eco-friendly light green background */
+  background-color: #f0faf7;
+  /* Green border for sustainability theme */
+  border: 2px solid #2dba78;
+  /* Rounded corners for modern look */
+  border-radius: 12px;
+  /* Add subtle shadow for depth */
+  box-shadow: 0 4px 8px rgba(45, 186, 120, 0.1);
+  /* Smooth transition for hover effects */
+  transition: all 0.3s ease;
+  /* Overflow hidden so images respect border radius */
+  overflow: hidden;
+  /* Use flexbox to organize card content */
+  display: flex;
+  /* Stack content vertically */
+  flex-direction: column;
+  /* Enable scroll snap alignment */
+  scroll-snap-align: start;
+  /* Add spacing for scroll snap */
+  scroll-snap-stop: always;
+}
+
+/* Card images */
+section div img {
+  /* Make image take full width of card */
+  width: 100%;
+  /* Maintain aspect ratio */
+  height: auto;
+  /* Set a reasonable height for images */
+  height: 180px;
+  /* Make images fill the space while maintaining aspect ratio */
+  object-fit: cover;
+  /* Smooth transition for hover effects */
+  transition: transform 0.3s ease;
+  /* Display as block to remove spacing below */
+  display: block;
+}
+
+/* Image zoom effect on card hover */
+section div:hover img {
+  /* Slightly zoom in the image for a dynamic effect */
+  transform: scale(1.05);
+}
+
+/* Content container inside cards */
+section div > *:not(img) {
+  /* Add padding to text content only */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* First text element gets top padding */
+section div h2 {
+  /* Add padding to the top */
+  padding-top: 20px;
+  /* Add padding to the bottom */
+  padding-bottom: 0;
+}
+
+/* Card hover effect - lift up when user hovers */
+section div:hover {
+  /* Move card up slightly */
+  transform: translateY(-5px);
+  /* Stronger shadow on hover */
+  box-shadow: 0 8px 16px rgba(45, 186, 120, 0.2);
+  /* Green border intensifies on hover */
+  border-color: #1e9b5c;
+  /* Background gets slightly brighter to show interactivity */
+  background-color: #e8f7f2;
+}
+
+/* Card heading styling */
+section h2 {
+  /* Large font for year */
+  font-size: 32px;
+  /* Eco-friendly green for year */
+  color: #2dba78;
+  /* Reduce margin for better spacing */
+  margin: 0 0 15px 0;
+  /* Professional font */
+  font-family: Arial, sans-serif;
+  /* Bold for emphasis */
+  font-weight: bold;
+  /* Smooth transition for hover effect */
+  transition: color 0.3s ease;
+}
+
+/* Year text gets brighter on hover */
+section div:hover h2 {
+  /* Brighter green on hover */
+  color: #1e9b5c;
+}
+
+/* Card subheading styling */
+section h3 {
+  /* Slightly smaller than h2 */
+  font-size: 20px;
+  /* Dark green for readability and sustainability theme */
+  color: #1e5c3f;
+  /* Spacing around the subheading */
+  margin: 10px 0 12px 0;
+  /* Professional font */
+  font-family: Arial, sans-serif;
+  /* Bold for emphasis */
+  font-weight: bold;
+  /* Smooth transition for hover effect */
+  transition: color 0.3s ease;
+}
+
+/* Title gets brighter on hover */
+section div:hover h3 {
+  /* Brighter green on hover */
+  color: #2dba78;
+}
+
+/* Card paragraph text */
+section p {
+  /* Readable font size */
+  font-size: 16px;
+  /* Dark gray-green for text readability */
+  color: #2d3d37;
+  /* Good line spacing for readability */
+  line-height: 1.6;
+  /* Remove default margins */
+  margin: 0 0 20px 0;
+  /* Professional font */
+  font-family: Arial, sans-serif;
+  /* Start with slightly transparent text */
+  opacity: 0.8;
+  /* Smooth transition for hover reveal effect */
+  transition: all 0.3s ease;
+  /* Small scale transformation for subtle effect */
+  transform: scale(1);
+}
+
+/* Paragraph text reveals fully and animates on hover */
+section div:hover p {
+  /* Make text fully opaque and bold on hover */
+  opacity: 1;
+  /* Slightly enlarge text on hover for emphasis */
+  transform: scale(1.02);
+  /* Slightly bolder for better readability */
+  font-weight: 500;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  /* Keep horizontal scrolling on all screen sizes */
+  section {
+    /* Cards remain in horizontal scroll */
+    flex-direction: row;
+    /* Maintain the scroll snap behavior */
+    overflow-x: auto;
+  }
+
+  /* Keep cards at consistent size on smaller screens */
+  section div {
+    /* Maintain fixed width for horizontal scroll */
+    flex: 0 0 280px;
+    /* Adjust for smaller screens */
+    min-width: 280px;
+  }
+
+  /* Adjust header for smaller screens */
+  header h1 {
+    /* Smaller font size on mobile */
+    font-size: 28px;
+  }
+}

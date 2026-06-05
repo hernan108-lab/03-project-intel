@@ -40,8 +40,8 @@ header img {
 header h1 {
   /* White text for high contrast against blue background */
   color: white;
-  /* Large, bold font for impact */
-  font-size: 48px;
+  /* Smaller, more balanced heading size */
+  font-size: 36px;
   /* Reduce space between lines */
   line-height: 1.2;
   /* Remove default margins and add custom spacing */

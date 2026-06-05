@@ -139,10 +139,11 @@
         next-generation sustainable semiconductor manufacturing.
       </p>
     </div>
-    
-<!-- NEW BOOTSTRAP 3-COLUMN SECTION -->
-<section class="container my-5 feature-grid">
-  <div class="row g-4">
+  </section>
+
+  <!-- NEW BOOTSTRAP 3-COLUMN SECTION -->
+  <section class="container my-5 feature-grid">
+    <div class="row g-4">
     <div class="col-12 col-md-4">
       <div class="feature-card h-100 p-4">
         <h2>RISE Strategy</h2>
@@ -222,5 +223,26 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // Detect HTML lang changes and switch the page direction automatically.
+    const rtlLanguages = new Set(["ar", "he", "fa", "ur", "ps", "sd", "yi"]);
+
+    function applyDirectionFromLanguage() {
+      const lang = document.documentElement.lang.trim().toLowerCase().slice(0, 2);
+      document.documentElement.dir = rtlLanguages.has(lang) ? "rtl" : "ltr";
+    }
+
+    const languageObserver = new MutationObserver((mutations) => {
+      for (const mutation of mutations) {
+        if (mutation.type === "attributes" && mutation.attributeName === "lang") {
+          applyDirectionFromLanguage();
+        }
+      }
+    });
+
+    languageObserver.observe(document.documentElement, { attributes: true });
+    applyDirectionFromLanguage();
+  </script>
 </body>
 </html>
